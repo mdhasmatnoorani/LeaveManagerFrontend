@@ -1,0 +1,55 @@
+<div class="card shadow border-0 mb-7">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <div class="d-flex">
+            <h2 class="mb-0">Issue Details</h2>
+            <button type="button" class="btn btn-sm btn-square btn-neutral ms-2" (click)="downloadUsersData()">
+                <i class="bi bi-file-earmark-excel-fill"></i>
+            </button>
+        </div>
+        <div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Search...">
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover table-nowrap">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Issue Id</th> 
+                    <th scope="col">Issue Title</th>
+                    <th scope="col">Issue Description</th>
+                    <th scope="col">Reported By</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngIf="paginatedData">
+                    <tr *ngFor="let is of paginatedData; let i = index">
+                        <td>{{ calculateSerialNumber(i) }}</td>
+                        <td>{{is.issueId}}</td>
+                        <td>{{is.issueTitle}}</td>
+                        <td>{{is.issueDescription}}</td>
+                        <td>{{is.reportedBy}}</td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover me-1"
+                                data-bs-toggle="tooltip" data-bs-placement="top" title="Mark as resolved">
+                                <i class="bi bi-check-circle"></i>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover"
+                                data-bs-toggle="tooltip" data-bs-placement="top" title="Mark as unresolved">
+                                <i class="bi bi-x-circle"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer border-0 py-5 d-flex justify-content-end align-items-center">
+        <mat-paginator [length]="issue.length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+            (page)="onPageChange($event)">
+        </mat-paginator>
+    </div>
+</div>

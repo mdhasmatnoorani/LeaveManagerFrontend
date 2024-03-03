@@ -1,0 +1,90 @@
+<div class="container my-5">
+    <form class="needs-validation g-3" novalidate>
+        <div class="row g-2">
+            <div class="col-md">
+                <div class="form-group my-3">
+                    <label for="leaveFrom" class="form-label">Leave From</label>
+                    <div class="input-group">
+                        <input class="form-control me-2" type="date" name="leaveFromDate" required />
+                        <input class="form-control" type="time" name="leaveFromTime" required />
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide leaveFrom date and time.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="form-group my-3">
+                    <label for="leaveTill" class="form-label">Leave Till</label>
+                    <div class="input-group">
+                        <input class="form-control me-2" type="date" name="leaveTillDate" required />
+                        <input class="form-control" type="time" name="leaveTillTime" required />
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide leaveTill date and time.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col-md">
+                <div class="form-group my-3">
+                    <label for="leaveCategory" class="form-label">Leave Category</label>
+                    <select name="leaveCategory" id="leaveCategory" class="form-select" required>
+                        <option selected disabled value="">Select Leave Category</option>
+                        <option value="1">Casual</option>
+                        <option value="2">Sick</option>
+                        <option value="3">Earned</option>
+                        <option value="4">Maternity</option>
+                        <option value="5">Paternity</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide leaveCategory.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="form-group my-3">
+                    <label for="leaveType" class="form-label">Leave Type</label>
+                    <select name="leaveType" id="leaveType" class="form-select" required>
+                        <option selected disabled value="">Select Leave Type</option>
+                        <option value="1">Half Day</option>
+                        <option value="2">Full Day</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide leaveType.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <div class="form-group my-3">
+                    <label for="leaveReason" class="form-label">Leave Reason</label>
+                    <textarea class="form-control" name="leaveReason" id="leaveReason" rows="3" required></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide leaveReason.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div align="right" class="mt-3">
+            <button type="submit" class="btn btn-custom btn-sm my-2 px-5 py-3">Add Leave</button>
+        </div>
+    </form>
+</div>

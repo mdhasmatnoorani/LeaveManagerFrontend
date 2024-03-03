@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Poppins:wght@300&display=swap');
+
+.wrapper-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(52, 9, 121);
+    background: linear-gradient(149deg, rgba(52, 9, 121, 0.9809173669467787) 46%, rgba(158, 0, 255, 1) 100%);
+}
+
+.wrapper-inner {
+    max-width: 30rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.login-heading {
+    background: linear-gradient(149deg, rgba(52, 9, 121, 0.9809173669467787), rgba(158, 0, 255, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.btn {
+    width: 100%;
+}
+
+.btn-gradient,
+.btn-gradient:active {
+    color: #fff;
+    outline: none;
+    background: rgb(52, 9, 121);
+    background: linear-gradient(149deg, rgba(52, 9, 121, 0.9809173669467787) 46%, rgba(158, 0, 255, 1) 100%);
+    transition: 0.3s all ease-in-out;
+}

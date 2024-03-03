@@ -1,0 +1,39 @@
+<h1 mat-dialog-title class="text-center">{{ data.title }}</h1>
+<div mat-dialog-content>
+    <div class="container my-5">
+        <form class="needs-validation g-3" novalidate>
+            <div class="row g-2">
+                <div class="form-group my-3">
+                    <label for="leaveCategory" class="form-label">User roles</label>
+                    <select name="leaveCategory" id="leaveCategory" class="form-select" required>
+                        <option selected disabled value="">Select User Role</option>
+                        <option value="1">Manager</option>
+                        <option value="2">Admin</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide leaveCategory.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group my-3">
+                    <label for="leaveReason" class="form-label">Role Change Reason</label>
+                    <textarea class="form-control" name="leaveReason" id="leaveReason" rows="3" required></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide leaveReason.
+                    </div>
+                </div>
+            </div>
+            <div mat-dialog-actions align="end">
+                <button mat-button [mat-dialog-close]="false" class="btn btn-sm btn-secondary me-2">Cancel</button>
+                <button mat-button [mat-dialog-close]="false" class="btn btn-sm btn-primary" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
